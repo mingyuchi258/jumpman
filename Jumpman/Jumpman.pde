@@ -20,6 +20,16 @@ void draw(){
   man.drawman();
   man.manmove();
   man.check();
+//draw the gameover interface
+  if (man.gameover){
+    fill(200, 0, 0, 150);
+    rect(0, 0, width, height);
+    textAlign(CENTER, CENTER);
+    textSize(65);
+    fill(255);
+    text("Game Over", width/2, height/2);
+    noLoop();
+  }
 }
 
 //press "w" man to jump up

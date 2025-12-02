@@ -57,5 +57,9 @@ r = br;
       P.x = P.x - land.s;
      }
    }
+//if man falls the game over
+    if (P.y > height + 50){
+      gameover = true;
+    }
   }
 }
