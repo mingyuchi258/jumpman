@@ -5,14 +5,14 @@ void setup(){
  size(600, 400);
 //Declaration and assignment
  land = new Land();
-
- float x = land.px[1]+ land.lw/2;
- float y = land.py[1] - 20;
+//Let man start on the third land
+ float x = land.px[2]+ land.lw/2;
+ float y = land.py[2] - 15;
  man= new Man(x, y, 15); 
 }
 
 void draw(){
- background(255);
+ background(#B4D4FF);
  //call land and man
   land.drawland();
   land.landmove();

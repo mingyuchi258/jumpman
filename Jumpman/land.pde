@@ -16,7 +16,7 @@ for (int i = 0; i < 5; i++){
 }
 //draw lands
 void drawland(){
- fill(0);
+ fill(#91AD6E);
     for(int i = 0; i < 5; i++){
       rect(px[i], py[i], lw, height - py[i]);
    }
@@ -24,7 +24,7 @@ void drawland(){
 //move land to the left and keep accelerating
   void landmove(){
  for (int i = 0; i < 5; i++){
-   s = s + 0.005;
+   s = s + 0.0007;
    px[i]= px[i] -s;
 //If land is moved out of the screen and refreshed on the far right
    if (px[i] + lw <0){
