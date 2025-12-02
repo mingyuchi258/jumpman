@@ -13,10 +13,18 @@ void setup(){
 
 void draw(){
  background(255);
- //call land
+ //call land and man
   land.drawland();
   land.landmove();
   
   man.drawman();
   man.manmove();
+  man.check();
 }
+
+//press "w" man to jump up
+void keyPressed(){
+  if (key == 'w'){
+    man.jump();
+  }
+ }

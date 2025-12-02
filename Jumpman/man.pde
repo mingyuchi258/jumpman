@@ -6,6 +6,7 @@ PVector P;
 PVector V;
 float r;
 float v = 3;
+float g = 0.5;
 
 Man(float x, float y, float br){
 P = new PVector(x, y);
@@ -25,6 +26,7 @@ r = br;
 //the movement law of man
 //the movement law of man
   void manmove(){
+    V.y = V.y + g;
     P.add(V);
 //press the "a" and the "d" to move man left and right
     if (keyPressed){
@@ -36,5 +38,24 @@ r = br;
     } else {
     V.x = 0;
     }
+  }
+//man can only jump when he is on land
+   void jump(){
+  for (int i = 0; i < 5; i++){
+    if (P.x > land.px[i] && P.x < land.px[i] + land.lw && P.y + r >= land.py[i] - 2 && P.y + r <= land.py[i] + 3){
+        V.y = -10;
+        }
+    }
+  }
+//check whether man is on land
+  void check(){
+    onland = false;
+    for (int i = 0; i < 5; i++){
+    if (P.x > land.px[i] && P.x < land.px[i] + land.lw && P.y + r >= land.py[i] && P.y + r <= land.py[i] + 10 && V.y >= 0){
+      P.y = land.py[i] - r;
+      V.y = 0;
+      P.x = P.x - land.s;
+     }
+   }
   }
 }
