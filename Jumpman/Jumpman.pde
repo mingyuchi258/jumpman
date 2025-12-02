@@ -10,4 +10,5 @@ void draw(){
  background(255);
  //call land
   land.drawland();
+  land.landmove();
 }
