@@ -1,3 +1,8 @@
+//jumpman Operation Guide: 
+//w controls jumping
+//a and d control left and right movement
+//you can only stand on land, otherwise you will fall off the cliff! 
+//You win if you cross 20 lands
 Land land;
 Man man;
 
