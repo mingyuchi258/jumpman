@@ -51,7 +51,7 @@ r = br;
   void check(){
     onland = false;
     for (int i = 0; i < 5; i++){
-    if (P.x > land.px[i] && P.x < land.px[i] + land.lw && P.y + r >= land.py[i] && P.y + r <= land.py[i] + 10 && V.y >= 0){
+    if (P.x > land.px[i]-10 && P.x < land.px[i] + land.lw+10 && P.y + r >= land.py[i]-10 && P.y + r <= land.py[i] + 20 && V.y >= 0){
       P.y = land.py[i] - r;
       V.y = 0;
       P.x = P.x - land.s;
