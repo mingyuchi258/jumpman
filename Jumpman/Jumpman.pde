@@ -47,8 +47,19 @@ void draw(){
     text("Game Over", width/2, height/2);
     noLoop();
     drawbutton();
-  }else{
-//call land and man
+  }else if(land.n >= 20){
+//man can only win after crossing 20 lands
+     fill(0, 200, 0, 150);
+    rect(0, 0, width, height);
+    textAlign(CENTER, CENTER);
+    textSize(65);
+    fill(255);
+    text("You Win", width/2, height/2);
+    noLoop();
+    drawbutton();
+
+ }else{
+ //call land and man
   land.drawland();
   land.landmove();
   
@@ -86,6 +97,7 @@ land.px[i] = savepx[i];
 land.py[i] = savepy[i];
 }
 land.s = 2;
+land.n = 0;
 man = new Man(savemx, savemy, savemr);
 RE = false;
 loop();

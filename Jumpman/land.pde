@@ -5,6 +5,7 @@ float[]py = new float[5];
 float lw =random(70, 90);
 float g =random(60, 100);
 float s = 2;
+int n = 0;
 
 Land(){
   float lx = 0;
@@ -36,6 +37,7 @@ void drawland(){
    }
    px[i] = out + lw + g;
    py[i] = 250 + random(0, 60);
+   n++;
    }
   }
 }
